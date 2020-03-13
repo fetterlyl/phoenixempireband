@@ -23,7 +23,7 @@
         </v-btn>
 
         <v-spacer></v-spacer>
-        
+
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
@@ -37,9 +37,9 @@
   export default {
     data: () => ({
       icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-instagram',
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-instagram',
       ],
     }),
   }

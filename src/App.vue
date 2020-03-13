@@ -3,6 +3,7 @@
     <AppHeader></AppHeader>
     <landing-parallax></landing-parallax>
     <AppGallery></AppGallery>
+    <AppConcertsTable></AppConcertsTable>
     <AppFooter></AppFooter>
   </div>
 </template>
@@ -13,6 +14,7 @@ import LandingParallax from './components/LandingParallax.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppGallery from './components/AppGallery.vue'
+import AppConcertsTable from './components/AppConcertsTable.vue'
 
 export default {
   name: 'App',
@@ -20,7 +22,8 @@ export default {
     AppHeader,
     LandingParallax,
     AppGallery,
-    AppFooter
+    AppFooter,
+    AppConcertsTable
   }
 }
 </script>
