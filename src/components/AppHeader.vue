@@ -1,26 +1,23 @@
 <template>
-  <v-card class="overflow-hidden">
+  <div>
     <v-app-bar
-      absolute
-      color="teal lighten-3"
+      dense
       dark
-      hide-on-scroll
-      prominent
-      scroll-target="#scrolling-techniques-4"
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
 
-      <v-toolbar-title>PhoenixEmpire</v-toolbar-title>
+      <v-btn rounded color="primary" dark>GALLERY</v-btn>
+
+      <v-spacer></v-spacer>
+
+      <v-toolbar-title>Phoenix Empire</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn rounded color="primary" dark>CONCERTS</v-btn>
 
       <v-spacer></v-spacer>
 
     </v-app-bar>
-    <v-sheet
-      id="scrolling-techniques-4"
-      class="overflow-y-auto"
-      max-height="200"
-    >
-      <v-container style="height: 4500px;"></v-container>
-    </v-sheet>
-  </v-card>
+  </div>
 </template>

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <landing-parallax></landing-parallax>
     <AppHeader></AppHeader>
+    <landing-parallax></landing-parallax>
+    <AppGallery></AppGallery>
+    <AppFooter></AppFooter>
   </div>
 </template>
 
@@ -9,12 +11,16 @@
 
 import LandingParallax from './components/LandingParallax.vue'
 import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
+import AppGallery from './components/AppGallery.vue'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    LandingParallax
+    LandingParallax,
+    AppGallery,
+    AppFooter
   }
 }
 </script>
