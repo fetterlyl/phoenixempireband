@@ -8,18 +8,20 @@
       flat
       tile
     >
-      <v-card-title class="teal">
+      <v-card-title>
 
         <v-spacer></v-spacer>
 
         <v-btn
           v-for="icon in icons"
           :key="icon"
-          class="mx-4"
+          class="white mx-4"
           dark
           icon
         >
-          <v-icon size="24px">{{ icon }}</v-icon>
+          <a :href="icon.link" target="_blank" class="myIcon">
+            <v-icon size="24px">{{ icon.iconName }}</v-icon>
+          </a>
         </v-btn>
 
         <v-spacer></v-spacer>
@@ -37,10 +39,20 @@
   export default {
     data: () => ({
       icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-instagram',
+        {iconName: "fab fa-facebook", link: "https://www.facebook.com/phoenixempiremusic"},
+        {iconName: "fab fa-twitter", link: ""},
+        {iconName: "fab fa-instagram", link: "https://www.instagram.com/phoenixempireband/"}
       ],
     }),
   }
 </script>
+
+<style>
+  a {
+    color: #ffffff;
+    text-decoration: none;
+}
+  .myIcon {
+    color: black !important;
+  }
+</style>

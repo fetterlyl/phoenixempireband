@@ -1,41 +1,85 @@
 <template>
-  <v-simple-table height="300px">
-    <template v-slot:default>
-      <thead>
-        <tr>
-          <th class="text-left">City</th>
-          <th class="text-left">Venue</th>
-          <th class="text-left">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in Concerts" :key="item.Concerts">
-          <td>{{ item.City }}</td>
-          <td>{{ item.Venue }}</td>
-          <td>{{item.Date}}</td>
-        </tr>
-        <v-button></v-button>
-      </tbody>
-    </template>
-  </v-simple-table>
+  <v-container fluid>
+    <v-row class="d-flex fill-height justify-center">
+      <v-col cols="8">
+        <v-data-table
+
+          dark
+          :headers="headers"
+          :items="concerts"
+          class="elevation-1"
+        ></v-data-table>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        Concerts: [
+        headers: [
           {
-            City: 'Edmonton',
-            Venue: 'Union Hall',
-            Date: '2020-05-21, 19:00'
+            text: 'WHEN',
+            align: 'start',
+            sortable: false,
+            value: 'time',
+            class: 'white--text'
+          },
+          { text: 'LOCATION', value: 'city', class: 'white--text' },
+          { text: 'VENUE', value: 'place', class: 'white--text' },
+        ],
+
+        concerts: [
+          {
+            time: 'November 6, 7:30pm',
+            city: 'Edmonton',
+            place: 'Union Hall'
+            
           },
           {
-            City: 'Calgary',
-            Venue: 'Birds Nest',
-            Date: '2020-06-22, 20:00'
-          }
-        ],
+            time: 'July 9, 7:30pm',
+            city: 'Calgary',
+            place: 'Nose Hill'
+            
+          },
+          {
+            time: 'July 13, 8:30pm',
+            city: 'Red Deer',
+            place: 'Birds Nest'
+            
+          },
+          {
+            time: 'July 23, 10:00pm',
+            city: 'Fort McMurray',
+            place: 'Awesome Place'
+            
+          },
+          {
+            time: 'August 15, 6:15pm',
+            city: 'Calgary',
+            place: 'SAIT'
+            
+          },
+          {
+            time: 'August 22, 7:00pm',
+            city: 'Calgary',
+            place: 'University of Calgary'
+            
+          },
+          {
+            time: 'September 11, 4:00pm',
+            city: 'Edmonton',
+            place: 'MacEwan University'
+            
+          },
+          {
+            time: 'September 14, 11:00pm',
+            city: 'Edmonton',
+            place: 'Have Mercy + Booze'
+            
+          },
+        ]
       }
     },
   }
