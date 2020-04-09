@@ -24,10 +24,10 @@
             align: 'start',
             sortable: false,
             value: 'time',
-            class: 'white--text'
+            class: 'deep-orange--text text--lighten-4'
           },
-          { text: 'LOCATION', value: 'city', class: 'white--text' },
-          { text: 'VENUE', value: 'place', class: 'white--text' },
+          { text: 'LOCATION', value: 'city', class: 'deep-orange--text text--lighten-4' },
+          { text: 'VENUE', value: 'place', class: 'deep-orange--text text--lighten-4' },
         ],
 
         concerts: [
